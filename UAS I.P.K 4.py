@@ -1,3 +1,5 @@
+%%writefile UASPEMKOMD(IPK4).py
+
 import streamlit as st
 import numpy as np
 from scipy import stats
@@ -573,7 +575,7 @@ elif menu == "Uji Rata-rata 1 Sampel":
                                          "Rumus", "Parameter",
                                          "Contoh Perhitungan Singkat",
                                          "Kalkulasi Interaktif",
-                                         "Kriteria Uji", "Flowchart Uji"
+                                         "Kriteria Uji", "Flowchart"
                                         ])
 
         with tab_penjelasan:
@@ -775,7 +777,7 @@ elif menu == "Uji Rata-rata 1 Sampel":
                                          "Rumus", "Parameter",
                                          "Contoh Perhitungan Singkat",
                                          "Kalkulasi Interaktif",
-                                         "Kriteria Uji", "Flowchart Uji"
+                                         "Kriteria Uji", "Flowchart"
                                         ])
 
         with tab_penjelasan:
@@ -973,8 +975,8 @@ elif menu == "Uji Rata-rata 1 Sampel":
         with tab_flowchart:
             st.header("Flowchart")
             st.write("Flowchart referensi untuk Uji Rata-rata 1 Sampel (Uji t)")
-        url = "https://drive.google.com/file/d/14BQq-V1QopQrpJMYf5rd3RHb77AhtbvF/preview"
-        st.components.v1.iframe(url, width=800, height=1000)
+            url = "https://drive.google.com/file/d/14BQq-V1QopQrpJMYf5rd3RHb77AhtbvF/preview"
+            st.components.v1.iframe(url, width=800, height=1000)
         
 # 3) Uji Rata-rata 2 Sampel Independen — Varians Diketahui (Uji Z)
 elif menu == "Uji Rata-rata 2 Sampel Independen (Uji Z)":
@@ -1104,7 +1106,7 @@ elif menu == "Uji Rata-rata 2 Sampel Independen (Uji Z)":
                 pv = hitung_p_value(hasil['z'], hasil['arah'])
                 tampilkan_kesimpulan_akhir(pv, hasil['alpha'])
 
-    with tab_kriteria_uji:
+    with tab_flowchart:
         st.header("Flowchart")
         st.write("Flowchart referensi untuk Uji Rata-rata 2 Sampel Independen (Uji z)")
         url = "https://drive.google.com/file/d/1lXvZnGPtmyQH1N6guD4FF-Oh4BfDnnxH/preview"
